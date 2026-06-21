@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reducing Your Carbon Footprint</title>
+        <link rel="stylesheet" href="Design.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="What is it.html">What is it</a></li>
+                <li><a href="Reducing your carbon footprint.html">How to reduce it</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Word Glossary.html">Glossary</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <span style="font-size: 30px;">Here are some ways to reduce your carbon footprint:</span>
+            <p>1. Use energy-efficient appliances and light bulbs. <br>
+                <br>For example you may see a star rating on your washing machine you would want this <br>
+                to be the maximum amount of stars because that means that there is less energy being used.</p>
+            <p>2. Reduce, reuse, and recycle to minimize waste.</p>
+            <p>You can use public transport or carpool to reduce the amount of cars on the road.</p>
+        </main>
+
+        <img src="Sustanibility%20copy.jpg" alt="Sustainability" class="image">
+        <span class="sustanibility-credit">Photo by <a href="">Fateme Alaei</a> on <a href="https://unsplash.com/photos/SUSTANIBILITY">Unsplash</a></span>
+        
+        <script>
+            const currentPage = decodeURIComponent(window.location.pathname.split("/").pop());
+            document.querySelectorAll("nav a").forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.parentElement.style.display = "none";
+                }
+            });
+        </script>
+    </body>
+</html>

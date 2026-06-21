@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>What is a Carbon Footprint?</title>
+    <link rel="stylesheet" href="Design.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="What is it.html">What is it</a></li>
+        <li><a href="Reducing your carbon footprint.html">How to reduce it</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Word Glossary.html">Glossary</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <!-- Intro text -->
+    <span   style="font-size: 30px;">
+        You may be wondering what a carbon footprint is.
+    </span>
+
+    <!-- Main definition paragraph -->
+    <p class="glossary-text">
+        A carbon footprint is an estimate of all greenhouse gases in our atmosphere, including methane, <br> nitrous oxide, and fluorinated gases.
+    </p>
+
+
+    
+    <span style="font-size: 24px;">
+        Let's go into a more detailed explanation!
+    </span>
+
+    <p>
+    You may also have heard of a carbon footprint being called larger or smaller. <br>
+    This is because different activities can release different amounts of greenhouse gases.
+</p>
+
+<p>
+    First, energy consumption can have a significant impact on your carbon footprint. <br>
+    This is because a lot of energy is produced by fossil fuels, e.g. coal or oil. <br>
+    Burning these fuels releases carbon dioxide into the atmosphere. <br>
+    These fuels are classified as non-renewable because they take millions of years <br>
+    to form, and they are being used up much faster than they can be replenished.
+</p>
+
+
+
+     <!--Image --> 
+    <img src="Oil platform copy.jpg" alt="Offshore Oil Platform" class="resized-image">
+
+     <!-- Image credit -->
+<span class="text">
+    <!--Photo Author -->
+    <a href="https://unsplash.com/@laohu911?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+       target="_blank" rel="noopener noreferrer">
+        Sheng Hu _
+    </a>
+    <!--site name -->
+    <a href="https://unsplash.com/photos/an-oil-rig-in-the-middle-of-the-ocean-0wsMNnEFaTo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+       target="_blank" rel="noopener noreferrer">
+         _Unsplash
+    </a>
+</span>
+    </span>
+</main>
+
+<!--linking words to glossary -->
+<script>
+const glossary = {
+    "carbon footprint": "Word Glossary.html#carbon-footprint",
+    "fluorinated gases": "Word Glossary.html#fluorinated-gases"
+};
+
+document.querySelectorAll(".glossary-text").forEach(el => {
+    let html = el.innerHTML;
+
+    for (let term in glossary) {
+        const regex = new RegExp(`\\b${term}\\b`, "gi");
+
+        html = html.replace(
+            regex,
+            `<a href="${glossary[term]}">$&</a>`
+        );
+    }
+
+    el.innerHTML = html;
+});
+</script>
+
+<!--make the page your on disappear from navbar then reappear when you go to a different page. -->
+<script>
+            const currentPage = decodeURIComponent(window.location.pathname.split("/").pop());
+            document.querySelectorAll("nav a").forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.parentElement.style.display = "none";
+                }
+            });
+        </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossary</title>
+    <link rel="stylesheet" href="Design.css">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="What is it.html">What is it</a></li>
+            <li><a href="Reducing your carbon footprint.html">How to reduce it</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Word Glossary.html">Glossary</a></li>
+        </ul>
+    </nav>
+
+    <h1>This is a glossary of words related to a carbon footprint</h1>
+
+    <h2 id="carbon-footprint">Carbon Footprint</h2>
+    <p>
+        The total amount of greenhouse gases caused directly or indirectly by a person, event .
+    </p>
+
+    <h2 id="fluorinated-gases">Fluorinated Gases</h2>
+    <p>
+        Fluorinated gases are human made chemicals that contain fluorine that traps heat inside the atmosphere 
+    </p>
+<script>
+            const currentPage = decodeURIComponent(window.location.pathname.split("/").pop());
+            document.querySelectorAll("nav a").forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.parentElement.style.display = "none";
+                }
+            });
+        </script>
+</body>
+</html>

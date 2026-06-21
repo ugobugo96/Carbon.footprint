@@ -1,0 +1,101 @@
+body {
+    background-color: #A8C3A0; /* page background color for all pages */
+}
+
+p {
+    font-size: 20px; /* paragraph text size for content text */
+    color: white; /* paragraph text color for content text */
+} /* applies to all <p> elements on the site */
+h1 {
+    font-size: 30px; /* heading text size for main titles */
+    color: #333; /* heading text color for main titles */
+} /* applies to all <h1> elements on the site */
+
+/* Style for navigation bar */
+nav ul {
+    list-style: none; /* remove bullets from the top menu list */
+    display: flex; /* arrange navigation items horizontally in the navbar */
+    justify-content: center; /* center the nav links in the navbar */
+    background-color: #333; /* background color for the top navigation bar */
+    padding: 10px; /* spacing inside the navbar */
+    margin: 0; /* remove default list margins around the nav */
+}
+
+nav li {
+    margin: 0 15px; /* spacing between each nav menu item */
+}
+
+nav a {
+    text-decoration: none; /* remove underline from the nav links */
+    color: white; /* nav link text color for Home/What is it/How to reduce it/About */
+    background-color: #555; /* nav link button background color */
+    padding: 10px 20px; /* clickable padding around each nav link */
+    border-radius: 5px; /* rounded corners for nav links */
+    display: inline-block; /* preserve the link padding */
+}
+
+nav a:hover {
+    background-color: #777; /* hover effect for nav links */
+} 
+
+nav {
+  position: fixed; /* pin the top navigation bar to the top of the viewport */
+  top: 0;
+  left: 0;
+  width: 100%; /* make the navigation bar full width */
+  z-index: 1000; /* keep the navbar above page content */
+  background-color: #333; /* background color for the top navbar */
+} /* applies to the <nav> element at the top of every page */
+
+img {
+    position: absolute; /* default absolute positioning for images on the page */
+    top: 0;
+    right: 0;
+}
+
+
+.oil platform image {
+    position: relative; /* intended for the oil platform image on the What is it page */
+    top: -20px; 
+    right: -720px; 
+}
+
+.text {
+  position: relative; /* position the text that labels or credits the oil platform image */
+  left: 962px; /* shift the caption text right */
+  bottom: -10px; /* shift the caption text up */
+} /* Style for credit text of oil platform */
+
+
+body {
+  padding-top: 70px; /* add space so the fixed navbar does not cover page content */
+}
+
+
+.resized-image {
+    width: 425px; /* width for the oil platform image in What is it page */
+    height: auto; /* keep the oil platform image aspect ratio */
+    position: absolute; /* place the oil platform image at a fixed point */
+    top: 60px; /* position the oil platform image down from the top */
+    right: 0; /* align the oil platform image to the right */
+}
+
+
+.image {
+    width: 300px; /* width for the sustainability image on the reducing page */
+    height: auto; /* keep the sustainability image aspect ratio */
+}
+
+
+.image {
+    position: absolute; /* position the sustainability image exactly */
+    top: 58px; /* vertical position of the sustainability image */
+    right: 0; /* align the sustainability image to the right side */
+}
+
+
+.sustanibility-credit {
+    position: relative; /* position the credit text for the sustainability image */
+    left: 970px; /* horizontal offset for the credit text */
+    bottom: -100px; /* vertical offset for the credit text */
+}

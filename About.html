@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About</title>
+        <link rel="stylesheet" href="Design.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="What is it.html">What is it</a></li>
+                <li><a href="Reducing your carbon footprint.html">How to reduce it</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Word Glossary.html">Glossary</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>About This Website</h1>
+            <p>This website is dedicated to educating users about carbon footprints.<br>
+                 It explains what a carbon footprint is, its components including energy consumption, 
+                 <br> transportation, waste production, and diet, and provides practical tips on how to 
+                 <br> reduce your personal carbon footprint to help combat climate change. <br>
+                All images are from Unsplash and each image is credited to its respective photographer.</p>
+        <span> </span>
+        </main>
+        <script>
+            const currentPage = decodeURIComponent(window.location.pathname.split("/").pop());
+            document.querySelectorAll("nav a").forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.parentElement.style.display = "none";
+                }
+            });
+        </script>
+    </body>
+</html> 
