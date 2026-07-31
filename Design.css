@@ -1,3 +1,7 @@
+* {
+    font-family: sans-serif;
+}
+
 body {
     background-color: #A8C3A0; /* page background color for all pages */
 }
@@ -61,9 +65,9 @@ img {
 }
 
 .text {
-  position: relative; /* position the text that labels or credits the oil platform image */
+  position: relative; /* position the text that credits the oil platform image */
   left: 962px; /* shift the caption text right */
-  bottom: -10px; /* shift the caption text up */
+  bottom: 105px; /* shift the caption text up */
 } /* Style for credit text of oil platform */
 
 
