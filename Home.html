@@ -5,6 +5,23 @@
         <link rel="stylesheet" href="Design.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
+<div class="footer">
+    <p>© 2026 Hugo | Carbon Footprint Website</p>
+</div>
+
+<script>
+window.addEventListener('scroll', () => {
+    const footer = document.querySelector('.footer');
+    const scrollTop = window.scrollY;
+    const maxScroll = 300; // pixels before fully transparent
+
+    let opacity = 1 - scrollTop / maxScroll;
+    opacity = Math.max(0, Math.min(1, opacity));
+
+    footer.style.opacity = opacity;
+});
+</script>
+
     <body>
 
         <nav>
@@ -13,7 +30,7 @@
                 <li><a href="What is it.html">What is it</a></li>
                 <li><a href="Reducing your carbon footprint.html">How to reduce it</a></li>
                 <li><a href="About.html">About</a></li>
-                li><a href="Word Glossary.html">Glossary</a></li>
+                <li><a href="Word Glossary.html">Glossary</a></li>
                 
             </ul>
         </nav>
@@ -26,7 +43,6 @@
 
         <main>
             <section id="home">
-            
                 <em><span style="font-size: 24px;">What it is and how to reduce it.</span></em>
             </section>
             <section id="what">
@@ -36,8 +52,15 @@
             <section id="reduce">
                 <h2>How to Reduce Your Carbon Footprint</h2>
                 <p>How can you reduce your carbon footprint?<br> Just learned what a carbon footprint is? <br> click on the how to reduce it page on the nav bar to <br>  start exploring ways to reduce it!</p>
+                <img src="Reduction.png" alt="Reduction image" class="reduction-image">
             </section>
         </main>
+        <p class="reduction-credit">
+    Photo by
+    <a href="https://pixabay.com/users/geralt-9301/" target="_blank" rel="noopener noreferrer">geralt</a>
+    on
+    <a href="https://pixabay.com/" target="_blank" rel="noopener noreferrer">Pixabay</a>
+</p>
         
         <script>
             const currentPage = decodeURIComponent(window.location.pathname.split("/").pop());

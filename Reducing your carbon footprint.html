@@ -5,6 +5,23 @@
         <link rel="stylesheet" href="Design.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
+<div class="footer">
+    <p>© 2026 Hugo | Carbon Footprint Website</p>
+</div>
+
+<script>
+window.addEventListener('scroll', () => {
+    const footer = document.querySelector('.footer');
+    const scrollTop = window.scrollY;
+    const maxScroll = 300; // pixels before fully transparent
+
+    let opacity = 1 - scrollTop / maxScroll;
+    opacity = Math.max(0, Math.min(1, opacity));
+
+    footer.style.opacity = opacity;
+});
+</script>
+
     <body>
 
         <nav>
@@ -19,15 +36,25 @@
 
         <main>
             <span style="font-size: 30px;">Here are some ways to reduce your carbon footprint:</span>
-            <p>1. Use energy-efficient appliances and light bulbs. <br>
-                <br>For example you may see a star rating on your washing machine you would want this <br>
+            <p>1. Use energy-efficient appliances and light bulbs to reduce electricity consumption. <br>
+                <br>For example you may see a star rating on your washing machine out of 5 stars, you would want this <br>
                 to be the maximum amount of stars because that means that there is less energy being used.</p>
             <p>2. Reduce, reuse, and recycle to minimize waste.</p>
-            <p>You can use public transport or carpool to reduce the amount of cars on the road.</p>
+            <p>You can use public transport or carpool to reduce the amount of cars on the road. <br>
+            this creates less Co2 emission overtime and it also reduces the chance of traffic jams forming. </p>
+
+            <p class="clothing-text">Clothing has a huge impact on your carbon footprint. First, making clothes uses a lot of resources such as land, water, and fertilisers, especially for cotton products. Second, clothes are often made in factories that use large amounts of energy, mostly from coal or natural gas, which creates harmful by-products. Then, clothes are transported all around the world, and the vehicles used to move them run on fuel. Finally, washing and drying clothes at home uses even more energy.</p>
+
+            <h1> Quick summary: </h1>
+            <p>• Use energy-efficient appliances and light bulbs.<br>
+            • Reduce, reuse, and recycle to minimize waste.<br>
+            • Use public transport or carpool to reduce CO2 emissions and traffic congestion.</p>
         </main>
 
-        <img src="Sustanibility%20copy.jpg" alt="Sustainability" class="image">
-        <span class="sustanibility-credit">Photo by <a href="">Fateme Alaei</a> on <a href="https://unsplash.com/photos/SUSTANIBILITY">Unsplash</a></span>
+        <div class="image-block">
+            <img src="Sustanibility%20copy.jpg" alt="Sustainability" class="image">
+            <span class="sustanibility-credit">Photo by <a href="">Fateme Alaei</a> on <a href="https://unsplash.com/photos/SUSTANIBILITY">Unsplash</a></span>
+        </div>
         
         <script>
             const currentPage = decodeURIComponent(window.location.pathname.split("/").pop());

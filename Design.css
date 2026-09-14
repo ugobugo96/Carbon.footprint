@@ -10,6 +10,11 @@ p {
     font-size: 20px; /* paragraph text size for content text */
     color: white; /* paragraph text color for content text */
 } /* applies to all <p> elements on the site */
+
+.clothing-text {
+    margin-top: 75px;
+}
+
 h1 {
     font-size: 30px; /* heading text size for main titles */
     color: #333; /* heading text color for main titles */
@@ -52,9 +57,9 @@ nav {
 } /* applies to the <nav> element at the top of every page */
 
 img {
-    position: absolute; /* default absolute positioning for images on the page */
-    top: 0;
-    right: 0;
+    position: static; /* default image placement should not overlap page content */
+    display: block;
+    max-width: 100%;
 }
 
 
@@ -64,20 +69,25 @@ img {
     right: -720px; 
 }
 
-.text {
+.oil-platform-credit {
   position: relative; /* position the text that credits the oil platform image */
-  left: 962px; /* shift the caption text right */
-  bottom: 105px; /* shift the caption text up */
+  left: 1010px; /* shift the caption text right */
+  bottom: 330px; /* shift the caption text up */
 } /* Style for credit text of oil platform */
 
 
 body {
   padding-top: 70px; /* add space so the fixed navbar does not cover page content */
+  min-height: 120vh; /* ensure the page has enough height to scroll */
 }
 
+main {
+  padding-right: 280px; /* leave space for the floating image on the right */
+  padding-bottom: 120px; /* create extra space below the content */
+}
 
 .resized-image {
-    width: 425px; /* width for the oil platform image in What is it page */
+    width: 400px; /* width for the oil platform image in What is it page */
     height: auto; /* keep the oil platform image aspect ratio */
     position: absolute; /* place the oil platform image at a fixed point */
     top: 60px; /* position the oil platform image down from the top */
@@ -85,21 +95,49 @@ body {
 }
 
 
+.image-block {
+    position: absolute; /* return the image block to the top-right */
+    top: 50px;
+    right: 0;
+    width: 250px;
+    max-width: 100%;
+}
+
 .image {
-    width: 300px; /* width for the sustainability image on the reducing page */
+    width: 100%; /* make the image fill the block */
     height: auto; /* keep the sustainability image aspect ratio */
+    display: block;
+    margin: 0;
 }
-
-
-.image {
-    position: absolute; /* position the sustainability image exactly */
-    top: 58px; /* vertical position of the sustainability image */
-    right: 0; /* align the sustainability image to the right side */
-}
-
 
 .sustanibility-credit {
-    position: relative; /* position the credit text for the sustainability image */
-    left: 970px; /* horizontal offset for the credit text */
-    bottom: -100px; /* vertical offset for the credit text */
+    display: block; /* keep the caption directly under the image */
+    text-align: left;
+    margin-top: 8px;
+    position: static;
+    color: #333;
+    font-size: 18px;
+}
+
+.reduction-image {
+    width: 375px; /* width for the reduction image on the home page */
+    height: auto; /* keep the reduction image aspect ratio */
+    margin-top: 50px; /* add space above the reduction image */
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #207805; /* solid green */
+    color: black;
+    text-align: center;
+}
+
+.reduction-credit {
+position: relative; /* position the credit text for the sustainability image */
+    left: 975px; /* horizontal offset for the credit text */
+    bottom: 148px;
+
 }
