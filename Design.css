@@ -1,9 +1,11 @@
 * {
     font-family: sans-serif;
+    box-sizing: border-box;
 }
 
 body {
     background-color: #A8C3A0; /* page background color for all pages */
+    padding-bottom: 90px; /* extra space so the last content is not flush against the footer */
 }
 
 p {
@@ -20,8 +22,17 @@ p {
     margin-top: 24px;
 }
 
+.household-tight {
+    margin-top: 0;
+    margin-bottom: 0.15em;
+}
+
+.glossary-final-paragraph {
+    margin-bottom: 40px;
+}
+
 .clothing-text {
-    margin-top: 75px;
+    margin-top: 0.2em;
 }
 
 h1 {
@@ -78,12 +89,21 @@ img {
     right: -720px; 
 }
 
-.oil-platform-credit {
-  position: relative; /* position the text that credits the oil platform image */
-  left: 1010px; /* shift the caption text right */
-  bottom: 330px; /* shift the caption text up */
-} /* Style for credit text of oil platform */
+.oil-image-block {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 400px;
+    max-width: 100%;
+}
 
+.oil-platform-credit {
+  display: block;
+  margin-top: 8px;
+  color: #333;
+  font-size: 16px;
+  position: static;
+}
 
 body {
   padding-top: 70px; /* add space so the fixed navbar does not cover page content */
@@ -127,12 +147,15 @@ main {
   text-align: center;
 }
 
+.carbon-footprint-link {
+    font-size: 30px;
+}
+
 .resized-image {
-    width: 400px; /* width for the oil platform image in What is it page */
-    height: auto; /* keep the oil platform image aspect ratio */
-    position: absolute; /* place the oil platform image at a fixed point */
-    top: 60px; /* position the oil platform image down from the top */
-    right: 0; /* align the oil platform image to the right */
+    display: block;
+    width: 100%;
+    height: auto;
+    position: static;
 }
 
 
@@ -223,6 +246,96 @@ position: relative; /* position the credit text for the sustainability image */
     left: 1500px; /* horizontal offset for the credit text */
     bottom: 200px;
 
+}
+
+/* Phone and tablet layout. */
+@media (max-width: 768px) {
+  body {
+    padding-top: 0;
+    padding-bottom: 100px;
+    min-height: 0;
+  }
+
+  nav {
+    position: static;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 8px;
+  }
+
+  nav li {
+    margin: 0;
+  }
+
+  nav a {
+    padding: 8px 12px;
+  }
+
+  main,
+  .home-content {
+    min-height: 0;
+    padding: 16px;
+  }
+
+  .home-title {
+    width: 100%;
+  }
+
+  .resized-image,
+  .reduction-figure,
+  .image-block {
+    position: static;
+    width: 100%;
+    max-width: 500px;
+    margin: 24px auto;
+  }
+
+  .oil-platform-credit,
+  .reduction-credit {
+    position: static;
+    left: auto;
+    bottom: auto;
+    display: block;
+    margin: 8px 0 24px;
+  }
+
+  iframe {
+    width: 100% !important;
+    height: 300px !important;
+  }
+
+  .footer {
+    position: fixed;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
+
+/* Smaller phone layout. */
+@media (max-width: 480px) {
+  nav a {
+    padding: 6px 8px;
+    font-size: 14px;
+  }
+
+  .footer-links a {
+    padding: 4px 6px;
+    font-size: 14px;
+  }
 }
 html {
     overflow-y: scroll;
