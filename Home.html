@@ -6,21 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 <div class="footer">
-    <p>© 2026 Hugo | Carbon Footprint Website</p>
+    <p> 2026 Hugo | Carbon Footprint Website</p>
+    <div class="footer-links">
+        <a href="Home.html">Home</a>
+        <a href="What is it.html">What is it</a>
+        <a href="Reducing your carbon footprint.html">How to reduce it</a>
+        <a href="About.html">About</a>
+        <a href="Word Glossary.html">Glossary</a>
+    </div>
 </div>
 
-<script>
-window.addEventListener('scroll', () => {
-    const footer = document.querySelector('.footer');
-    const scrollTop = window.scrollY;
-    const maxScroll = 300; // pixels before fully transparent
 
-    let opacity = 1 - scrollTop / maxScroll;
-    opacity = Math.max(0, Math.min(1, opacity));
-
-    footer.style.opacity = opacity;
-});
-</script>
 
     <body>
 
@@ -41,28 +37,39 @@ window.addEventListener('scroll', () => {
 </body>
 
 
-        <main>
-            <section id="home">
-                <em><span style="font-size: 24px;">What it is and how to reduce it.</span></em>
-            </section>
+        <main class="home-content">
+            <!-- Main page title. -->
+            <h1 class="home-title">Carbon Footprint</h1>
             <section id="what">
                 <h2>What is a Carbon Footprint?</h2>
-                <p>What is a carbon footprint?<br>Have no idea what a carbon footprint is? <br> click on the what is it page on the nav bar to start learning!</p>
+                <section id="home">
+                    <em><span style="font-size: 24px;">What it is and how to reduce it.</span></em>
+                </section>
+                <!-- Links to the detailed explanation. -->
+                <p><a href="What is it.html#detailed-explanation">What is a carbon footprint?</a><br>
+                    <a href="What is it.html#detailed-explanation">How do you as an individual affect your carbon footprint?</a><br>
+                    
+                </p>
             </section>
             <section id="reduce">
                 <h2>How to Reduce Your Carbon Footprint</h2>
-                <p>How can you reduce your carbon footprint?<br> Just learned what a carbon footprint is? <br> click on the how to reduce it page on the nav bar to <br>  start exploring ways to reduce it!</p>
-                <img src="Reduction.png" alt="Reduction image" class="reduction-image">
+                <p class="categories-question">What categories can you reduce your carbon footprint in?</p>
+                <!-- Links to each category. -->
+                <p><a href="Reducing your carbon footprint.html#household">Household</a><br>
+                    <a href="Reducing your carbon footprint.html#transport">Transport</a><br>
+                    <a href="Reducing your carbon footprint.html#food">Food</a></p>
+                <!-- Image and source credit. -->
+                <figure class="reduction-figure">
+                    <img src="Reduction-image.png" alt="Ways to reduce your carbon footprint" class="reduction-image">
+                    <figcaption>
+                        Image by <a href="https://archive.ipa-agency.net/eng/front/item-creative?id=554334806&amp;string=+co2&amp;utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Frank Harms</a>
+                    </figcaption>
+                </figure>
             </section>
         </main>
-        <p class="reduction-credit">
-    Photo by
-    <a href="https://pixabay.com/users/geralt-9301/" target="_blank" rel="noopener noreferrer">geralt</a>
-    on
-    <a href="https://pixabay.com/" target="_blank" rel="noopener noreferrer">Pixabay</a>
-</p>
         
         <script>
+            // Hide the link for the current page.
             const currentPage = decodeURIComponent(window.location.pathname.split("/").pop());
             document.querySelectorAll("nav a").forEach(link => {
                 if (link.getAttribute("href") === currentPage) {

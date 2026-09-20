@@ -6,21 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <div class="footer">
-    <p>© 2026 Hugo | Carbon Footprint Website</p>
+    <p> 2026 Hugo | Carbon Footprint Website</p>
+    <div class="footer-links">
+        <a href="Home.html">Home</a>
+        <a href="What is it.html">What is it</a>
+        <a href="Reducing your carbon footprint.html">How to reduce it</a>
+        <a href="About.html">About</a>
+        <a href="Word Glossary.html">Glossary</a>
+    </div>
 </div>
 
-<script>
-window.addEventListener('scroll', () => {
-    const footer = document.querySelector('.footer');
-    const scrollTop = window.scrollY;
-    const maxScroll = 300; // pixels before fully transparent
 
-    let opacity = 1 - scrollTop / maxScroll;
-    opacity = Math.max(0, Math.min(1, opacity));
-
-    footer.style.opacity = opacity;
-});
-</script>
 
 <body>
 
@@ -43,13 +39,14 @@ window.addEventListener('scroll', () => {
 
     <!-- Main definition paragraph -->
     <p class="glossary-text">
-    A carbon footprint is an estimate of all greenhouse gases in our atmosphere, including methane, 
-        <br> nitrous oxide, and fluorinated gases .
+    A <a href="Word Glossary.html#carbon-footprint">carbon footprint</a> is an estimate of all greenhouse gases in our atmosphere, <br> including methane,
+nitrous oxide, and fluorinated gases.
     </p>
 
 
     
-    <span style="font-size: 24px;">
+    <!-- Link target from the home page. -->
+    <span id="detailed-explanation" style="font-size: 24px;">
         Let's go into a more detailed explanation!
     </span>
 
@@ -57,27 +54,29 @@ window.addEventListener('scroll', () => {
     You may also have heard of a carbon footprint being called larger or smaller. <br>
     This is because different activities can release different amounts of greenhouse gases. 
     <br> For example, driving a car releases more greenhouse gases than walking or riding a bike. <br>
-    It can also be determined by your diet because if you usually eat lots of meat it makes it a larger, <br>
-     because the amount of food, land size and resources also are taken into account when calculating your carbon footprint. <br>
-     Where as a plant diet has a smaller carbon output because it takes less resources to grow foods such as vegetables, fruits, and grains.
+    It can also be determined by your diet because if you usually eat lots of meat it makes <br> it a larger, 
+     because the amount of food, land size and resources also are taken into account  <br> when calculating your carbon footprint. 
+     Where as a plant diet has a smaller carbon output <br> because it takes less resources to grow foods such as vegetables, fruits, and grains.
 </p>
 
 
-<span style="font-size: 24px;">
+<!-- Link target for this section. -->
+<span id="how-you-as-an-individual" style="font-size: 24px;">
     How do you, as an individual, affect your own carbon footprint?
 </span> 
 
-<p>
+
     
+    <p class="glossary-text">
     Your carbon footprint is determined by the activities you do in your daily life. <br>
-    For example, if you drive a car to school or work every day, that will increase your carbon footprint. <br>
-    If you use public transportation, walk, or ride a bike instead, that will decrease your carbon footprint. <br>
+    For example, if you drive a car to school or work every day, that will increase your <br> carbon footprint. 
+    If you use public transportation, walk, or ride a bike instead, that will decrease <br> your carbon footprint. 
     The same goes for the food you eat and the products you buy. <br>
-    If you buy products that are made with sustainable materials and have a smaller environmental impact, <br>
-    that will decrease your carbon footprint. <br>
-    If you buy products that are made with unsustainable materials and have a larger environmental impact, <br>
-    that will increase your carbon footprint.
-</p>
+    If you buy products that are made with sustainable materials and have a smaller <br> environmental impact, 
+    that will decrease your carbon footprint. 
+    If you buy products that are <br> made with unsustainable materials and have a larger  environmental impact, 
+    that will <br> increase your carbon footprint.</p>
+
 
 
 
@@ -98,24 +97,20 @@ window.addEventListener('scroll', () => {
     </a>
 </span>
     </span>
-</main>
 <p> The average person usually emits about 4.7 metric tons of CO2 per year. <br>
-You can use this website to calculate your own carbon footprint! <a href="https://www.footprintcalculator.org/home/en" target="_blank">https://www.footprintcalculator.org/home/en</a>  <br>
- or you can do it in the embed below</p>
+You can use this website to calculate your own carbon footprint! <br>
+<a href="https://www.footprintcalculator.org/home/en" target="_blank">https://www.footprintcalculator.org/home/en</a>  <br> </p>
 
-<iframe 
-    src="https://www.footprintcalculator.org/home/en"
-    width="100%" 
-    height="500px"
-    style="border:none;">
-</iframe>
+
+</main>
 
 <!--linking words to glossary -->
 <script>
 const glossary = {
-    "carbon footprint": "Word Glossary.html#carbon-footprint",
     "fluorinated gases": "Word Glossary.html#fluorinated-gases",
-    "greenhouse gases": "Word Glossary.html#greenhouse-gases"
+    "greenhouse gases": "Word Glossary.html#greenhouse-gases",
+    "unsustainable": "Word Glossary.html#unsustainable",
+    "sustainable": "Word Glossary.html#sustainable"
 };
 
 document.querySelectorAll(".glossary-text").forEach(el => {
@@ -134,7 +129,7 @@ document.querySelectorAll(".glossary-text").forEach(el => {
 });
 </script>
 
-<!--make the page your on disappear from navbar then reappear when you go to a different page. -->
+<!--make the page you are on disappear from navbar then reappear when you go to a different page. -->
 <script>
             const currentPage = decodeURIComponent(window.location.pathname.split("/").pop());
             document.querySelectorAll("nav a").forEach(link => {

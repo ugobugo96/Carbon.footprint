@@ -6,21 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 <div class="footer">
-    <p>© 2026 Hugo | Carbon Footprint Website</p>
+    <p> 2026 Hugo | Carbon Footprint Website</p>
+    <div class="footer-links">
+        <a href="Home.html">Home</a>
+        <a href="What is it.html">What is it</a>
+        <a href="Reducing your carbon footprint.html">How to reduce it</a>
+        <a href="About.html">About</a>
+        <a href="Word Glossary.html">Glossary</a>
+    </div>
 </div>
 
-<script>
-window.addEventListener('scroll', () => {
-    const footer = document.querySelector('.footer');
-    const scrollTop = window.scrollY;
-    const maxScroll = 300; // pixels before fully transparent
-
-    let opacity = 1 - scrollTop / maxScroll;
-    opacity = Math.max(0, Math.min(1, opacity));
-
-    footer.style.opacity = opacity;
-});
-</script>
 
     <body>
 
@@ -35,24 +30,25 @@ window.addEventListener('scroll', () => {
         </nav>
 
         <main>
-            <span style="font-size: 40px;">Here are some ways to reduce your carbon footprint:</span>
-            <h2> Transport</h2>
+            <span style="font-size: 40px;">Here are some ways to reduce your <br> carbon footprint:</span>
+            <!-- Link targets for the home page. -->
+            <h2 id="transport"> Transport</h2>
             <p>You can use public transport or carpool to reduce the amount of cars on the road. <br>
             this creates less Co2 emission overtime and it also reduces the chance of traffic jams forming.  <br>
-        It is also much cheaper to take public transport most of the time because you dont need to fill up your car with gas or get it fixed at the mechanics if it breaks down</p>
+        It is also much cheaper to take public transport most of the time because you dont need to fill up your car with gas or get it fixed at the mechanics if it breaks down.</p>
            
-        <h2> Household </h2>
+        <h2 id="household"> Household </h2>
         <p>1. Use energy-efficient appliances and light bulbs to reduce electricity consumption. <br>
-                <br>For example you may see a star rating on your washing machine out of 5 stars, you would want this <br>
+                <br>For example you may see a star rating on your washing machine out of 5 stars, you would want this 
                 to be the maximum amount of stars because that means that there is less energy being used.</p>
         <p>2.- you can get LED lights(Light Emitting Diodes) these use much less energy, whereas <br>
-            the tradional lights comsumed more enrgy and alot tof that energy went to heat too. <br>
+            the tradional lights consume more energy and a lot of that energy went to heat too. <br>
         
-            3. The most obvious thing to do is to turn off lights when you leave rooms and unplug devices that are using <br>
+            3. The most obvious thing to do is to turn off lights when you leave rooms and unplug devices that are using 
         electricity when they are not in use and when they dont need too, as well as reducing your carbon footprint it reduces your power bill too! so a win win.</p>
-        <p class="clothing-text"> 4. Clothing has a huge impact on your carbon footprint. First, making clothes uses a lot of resources such as land, water, and fertilisers, especially for cotton products. Second, clothes are often made in factories that use large amounts of energy, mostly from coal or natural gas, which creates harmful by-products. Then, clothes are transported all around the world, and the vehicles used to move them run on fuel. Finally, washing and drying clothes at home uses even more energy.</p>
+        <p class="clothing-text"> 4. Clothing has a huge impact on your carbon footprint. <br> First, making clothes uses a lot of resources such as land, water, and fertilisers, especially for cotton products. Secondly, clothes are often made in factories that use large amounts of energy, mostly from coal or natural gas, which creates harmful by-products. <br> Then, clothes are transported all around the world, and the vehicles used to move them run on fuel. Finally, washing and drying clothes at home uses even more energy.</p>
        
-        <h2> Food</h2>
+        <h2 id="food"> Food</h2>
         <p>1. Eating less meat and dairy products can reduce your carbon footprint. <br>
         This is because the production of meat and dairy products requires more resources and energy compared to plant-based foods. <br>
         By choosing to eat more plant-based meals, you can help reduce greenhouse gas emissions and conserve natural resources.</p>
@@ -66,7 +62,7 @@ window.addEventListener('scroll', () => {
         <p> If this all seems like too much information the best thing you can do is start small, maybe focus on one area at a time, like transport and try and use your car less. <br> 
         Try biking to work or tking the public transport like the bus or train.</p>
             <h1> Quick summary: </h1>
-            <p> First you should calculate your carbon footprint to figure out what you need to most urgently reduce <br>
+            <p> First you should calculate your carbon footprint to figure out what you need to most urgently reduce. <br>
             • Use energy-efficient appliances and light bulbs.<br>
             • Reduce, reuse, and recycle to minimize waste.<br>
             • Use public transport or carpool to reduce CO2 emissions and traffic congestion. <br>

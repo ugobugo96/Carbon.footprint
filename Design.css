@@ -11,6 +11,15 @@ p {
     color: white; /* paragraph text color for content text */
 } /* applies to all <p> elements on the site */
 
+.categories-question {
+    color: black; /* Make this question black. */
+}
+
+.about-text {
+    line-height: 1.8; /* Add space between lines. */
+    margin-top: 24px;
+}
+
 .clothing-text {
     margin-top: 75px;
 }
@@ -81,9 +90,41 @@ body {
   min-height: 120vh; /* ensure the page has enough height to scroll */
 }
 
+#detailed-explanation {
+  scroll-margin-top: 80px; /* keep this linked section visible below the fixed navbar */
+}
+
+#transport {
+  scroll-margin-top: 70px; /* keep the Transport heading visible below the fixed navbar */
+}
+
+#household {
+  scroll-margin-top: 70px; /* keep the Household heading visible below the fixed navbar */
+}
+
+#food {
+  scroll-margin-top: 70px; /* keep the Food heading visible below the fixed navbar */
+}
+
 main {
   padding-right: 280px; /* leave space for the floating image on the right */
   padding-bottom: 120px; /* create extra space below the content */
+}
+
+.home-content {
+  position: relative; /* Keep the image in this section. */
+  min-height: 600px; /* Leave room for the image. */
+  padding-right: 0; /* the home page has no right-side image */
+}
+
+.home-title {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 0 24px;
+  padding: 12px;
+  background-color: #1b5e20; /* Green title banner. */
+  color: white;
+  text-align: center;
 }
 
 .resized-image {
@@ -119,10 +160,26 @@ main {
     font-size: 18px;
 }
 
+.reduction-figure {
+    position: absolute; /* Put the image beside the text. */
+    top: 85px; /* Place it below the title. */
+    bottom: auto;
+    right: 0;
+    width: 500px;
+    max-width: 100%;
+    margin: 0;
+}
+
 .reduction-image {
-    width: 375px; /* width for the reduction image on the home page */
-    height: auto; /* keep the reduction image aspect ratio */
-    margin-top: 50px; /* add space above the reduction image */
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.reduction-figure figcaption {
+    margin-top: 8px;
+    color: #333;
+    font-size: 16px;
 }
 
 .footer {
@@ -130,14 +187,43 @@ main {
     left: 0;
     bottom: 0;
     width: 100%;
+    z-index: 1001; /* keep the footer in front of page images */
     background-color: #207805; /* solid green */
     color: black;
     text-align: center;
 }
 
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 0 10px 6px;
+}
+
+.footer-links a {
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: #14520c;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    background-color: #0e3d08;
+}
+
+.footer p {
+    margin: 6px 0;
+    font-size: 16px;
+}
+
 .reduction-credit {
 position: relative; /* position the credit text for the sustainability image */
-    left: 975px; /* horizontal offset for the credit text */
-    bottom: 148px;
+    left: 1500px; /* horizontal offset for the credit text */
+    bottom: 200px;
 
+}
+html {
+    overflow-y: scroll;
 }
